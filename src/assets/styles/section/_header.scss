@@ -1,0 +1,102 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 79px;
+    z-index: 1;
+
+    @include a (tablet) {
+        top: 40px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+            width: 36px;
+            height: 36px;
+            background-color: $accent-color;
+            border-radius: 50%;
+        }
+
+        &-item {
+            width: 14px;
+            height: 6px;
+            background-color: $light-color;
+            border-radius: 2px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 30px;
+
+    }
+
+    &__item {
+        &-link {
+            font-family: 'Gilroy', sans-serif;
+            font-size: toRem(12);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #B5B5B5;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__btn {
+        font-family: 'Rubik', sans-serif;
+        font-size: toRem(12);
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: 112px;
+        line-height: 36px;
+
+        &-left {
+            border: 1px solid $accent-color;
+            border-radius: 4px;
+            background-color: transparent;
+            color: $accent-color;
+        }
+
+        &-right {
+            background-color: $accent-color;
+            box-shadow: -11.09px 18.13px 36.6483px rgba(242, 153, 74, 0.13);
+            border-radius: 3px;
+            color: $light-color;
+        }
+    }
+}

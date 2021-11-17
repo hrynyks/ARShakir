@@ -1,0 +1,93 @@
+.choice {
+    padding-bottom: 170px;
+
+    &__title {
+        font-size: toRem(42);
+        line-height: 50px;
+        font-weight: 700;
+        color: $main-color;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+
+    &__subtitle {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 600;
+        display: block;
+        text-align: center;
+        color: #8476AA;
+        margin-bottom: 50px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 247px);
+        justify-content: center;
+        gap: 43px 102px;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(2, 247px);
+        }
+
+        @include a (tablet) {
+            grid-template-columns: 274px;
+        }
+    }
+
+    &__item {
+
+        font-family: 'Gilroy', sans-serif;
+
+        &-title {
+            font-size: toRem(18);
+            font-weight: 700;
+            color: $main-color;
+            display: block;
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+            }
+
+            &-1::before {
+                background: url(/src/assets/images/choice-item-1.png);
+            }
+
+            &-2::before {
+                background: url(/src/assets/images/choice-item-2.png);
+            }
+
+            &-3::before {
+                background: url(/src/assets/images/choice-item-3.png);
+            }
+
+            &-4::before {
+                background: url(/src/assets/images/choice-item-4.png);
+            }
+
+            &-5::before {
+                background: url(/src/assets/images/choice-item-5.png);
+            }
+
+            &-6::before {
+                background: url(/src/assets/images/choice-item-6.png);
+            }
+        }
+
+        &-descr {
+            font-size: toRem(14);
+            font-weight: 600;
+            line-height: 22px;
+            color: #8476AA;
+            padding-left: 30px;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.help {
+    padding-bottom: 196px;
+    position: relative;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        max-width: 512px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            order: -1;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        font-size: toRem(26);
+        line-height: 32px;
+        letter-spacing: 0.325px;
+        color: $main-color;
+        margin: 0 auto 32px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        font-family: 'Gilroy', sans-serif;
+        font-size: toRem(15);
+        line-height: 20px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: #8476AA;
+        max-width: 414px;
+        width: 100%;
+        margin-bottom: 48px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+            margin: 0 auto 50px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 64px;
+    }
+
+    &__item {
+        max-width: 294px;
+        width: 100%;
+
+        &-title {
+            font-size: toRem(15);
+            letter-spacing: 0.2px;
+            color: $main-color;
+            display: block;
+            position: relative;
+            padding-top: 66px;
+            margin-bottom: 8px;
+
+            @include a (tablet-xl) {
+                text-align: center;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                left: 0;
+                top: 20px;
+
+                @include a (tablet-xl) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &-1::before {
+                background: url(/src/assets/images/help-item-1.png);
+            }
+            &-2::before {
+                background: url(/src/assets/images/help-item-2.png);
+            }
+        }
+
+        &-descr {
+            font-family: 'Gilroy', sans-serif;
+            font-size: toRem(15);
+            line-height: 20px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            color: #8476AA;
+            max-width: 224px;
+            width: 100%;
+
+            @include a (tablet-xl) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__image {
+        max-width: 494px;
+        width: 100%;
+    }
+}

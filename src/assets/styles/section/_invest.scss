@@ -1,0 +1,75 @@
+.invest {
+    padding-bottom: 143px;
+    position: relative;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__content {
+        max-width: 470px;
+        width: 100%;
+
+        @include a (tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: toRem(42);
+        line-height: 50px;
+        color: $main-color;
+        margin-bottom: 32px;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        font-family: 'Gilroy', sans-serif;
+        font-size: toRem(15);
+        line-height: 28px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #8476AA;
+        margin-bottom: 46px;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        font-family: 'Rubik', sans-serif;
+        font-size: toRem(12);
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $light-color;
+        background-color: $accent-color;
+        width: 155px;
+        line-height: 52px;
+        box-shadow: -11.09px 18.13px 36.6483px rgba(242, 153, 74, 0.23);
+        border-radius: 3px;
+    }
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+}

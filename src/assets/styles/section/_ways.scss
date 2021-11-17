@@ -1,0 +1,79 @@
+.ways {
+    padding-bottom: 169px;
+
+    &__title {
+        font-size: toRem(36);
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.33px;
+        color: $main-color;
+        max-width: 690px;
+        width: 100%;
+        margin: 0 auto 32px;
+
+        &-span {
+            color: $accent-color;
+        }
+    }
+
+    &__descr {
+        font-family: 'Gilroy', sans-serif;
+        font-size: toRem(15);
+        line-height: 20px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #8476AA;
+        max-width: 414px;
+        width: 100%;
+        margin: 0 auto 48px;
+
+        @include a (mobile) {
+            max-width: 300px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        &-number {
+            font-size: toRem(36);
+            font-weight: 700;
+            letter-spacing: 0.33px;
+            color: $main-color;
+        }
+
+        &-descr {
+            font-family: 'Gilroy', sans-serif;
+            font-size: toRem(15);
+            line-height: 20px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.2px;
+            color: #8476AA;
+            max-width: 290px;
+            width: 100%;
+
+            @include a (mobile) {
+                max-width: 150px;
+            }
+        }
+    }
+
+
+}

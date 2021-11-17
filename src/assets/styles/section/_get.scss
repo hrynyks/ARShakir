@@ -1,0 +1,84 @@
+.get {
+    padding-bottom: 185px;
+    position: relative;
+
+    &-wrap {
+        max-width: 980px;
+        width: 100%;
+        background: rgba(60, 62, 125, 0.19);
+        backdrop-filter: blur(134px);
+        border-radius: 5px;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-family: 'Rubik', sans-serif;
+        font-size: toRem(36);
+        font-weight: 500;
+        color: $accent-color;
+        text-align: center;
+        margin: 20px;
+    }
+
+    &__descr {
+        font-family: 'Rubik', sans-serif;
+        line-height: 22px;
+        color: #95A1BB;
+        text-align: center;
+        max-width: 396px;
+        width: 100%;
+        margin: 0 auto 23px;
+    }
+
+    &__form {
+        display: flex;
+        height: 56px;
+        margin: 0 auto 16px;
+        justify-content: center;
+    }
+
+    &__input {
+        padding: 16px;
+        width: 300px;
+        background: #F6F6F6;
+        border-radius: 5px;
+        background-color: rgba($color: #F6F6F6, $alpha: 0.1);
+
+        &::placeholder {
+            font-size: toRem(14);
+            letter-spacing: 0.2px;
+            color: rgba($color: #ffffff, $alpha: 0.2)
+        }
+    }
+
+    &__btn {
+        font-family: 'Rubik', sans-serif;
+        font-size: tpRem(12);
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $light-color;
+        background-color: $accent-color;
+        border-radius: 0px 5px 5px 0px;
+        width: 128px;
+    }
+
+    &-span {
+        font-family: 'Gilroy', sans-serif;
+        font-size: toRem(14);
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: #8476AA;
+        display: block;
+        text-align: center;
+    }
+
+    &__bg {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
